@@ -1,0 +1,27 @@
+header {
+  margin: 0px;
+  padding: 0px;
+  background-color: $color-principal;
+  height: 100px;
+  color: $color-secundario;
+  padding: 10px;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    div {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .logo {
+        background-image: url(../../imagenes/react.png);
+        height: 70px;
+        width: 70px;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

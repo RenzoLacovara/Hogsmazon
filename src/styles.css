@@ -1,0 +1,17 @@
+body {
+  height: 100%;
+  background-color: #fcbf49;
+}
+.navbar {
+  background-color: #003049;
+}
+.logo {
+  background-image: url(./imagenes/react.png);
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+.list a {
+  text-decoration: none;
+  margin: 0px 10px;
+}
