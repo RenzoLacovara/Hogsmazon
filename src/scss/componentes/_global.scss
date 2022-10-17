@@ -18,3 +18,20 @@ body {
   display: flex;
   flex-direction: column;
 }
+.cart {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-detalle;
+  color: $color-principal;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  i {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+}

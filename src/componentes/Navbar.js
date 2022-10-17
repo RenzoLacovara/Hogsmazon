@@ -7,10 +7,10 @@ function Header(prop) {
     <header>
       <nav className="navbar">
         <div>
-          <CartWidget />
           <h1>Bienvenido a {nombrePagina}</h1>
         </div>
         <Redes />
+        <CartWidget valor="5" />
       </nav>
     </header>
   );
