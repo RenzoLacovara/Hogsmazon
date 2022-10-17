@@ -1,5 +1,6 @@
 import React from "react";
-import ItemListContainer from "../ItemListContainer";
+import ItemListContainer from "../scss/componentes/ItemListContainer";
+
 const Main = () => {
   return (
     <div className="main">
