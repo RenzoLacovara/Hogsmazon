@@ -4,6 +4,7 @@ import Main from "./componentes/Main";
 import Footer from "./componentes/Footer";
 import ItemListContainer from "./componentes/ItemListContainer";
 import "./scss/estilos.scss";
+import "./style.css";
 
 function App() {
   return (
