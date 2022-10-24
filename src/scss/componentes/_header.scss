@@ -15,9 +15,18 @@ header {
       justify-content: center;
       align-items: center;
       gap: 20px;
+      h1 {
+        .nombre1 {
+          font-family: "Harry Potter", sans-serif;
+          font-weight: 600;
+        }
+        .nombre2 {
+          font-family: "Amazon Ember Display", sans-serif;
+        }
+      }
       img {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
       }
     }
   }

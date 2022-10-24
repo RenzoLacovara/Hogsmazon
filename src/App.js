@@ -2,12 +2,14 @@ import React from "react";
 import Navbar from "./componentes/Navbar";
 import Main from "./componentes/Main";
 import Footer from "./componentes/Footer";
+import ItemListContainer from "./componentes/ItemListContainer";
 import "./scss/estilos.scss";
 
 function App() {
   return (
     <>
-      <Navbar nombre="Hogsmazon" />
+      <Navbar nombre1="Hogs" nombre2="mazon" />
+      <ItemListContainer className="text" nombre="Renzo" />
       <Main />
       <Footer />
     </>
