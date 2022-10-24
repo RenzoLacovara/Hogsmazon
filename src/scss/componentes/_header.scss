@@ -15,12 +15,9 @@ header {
       justify-content: center;
       align-items: center;
       gap: 20px;
-      .logo {
-        background-image: url(../../imagenes/react.png);
-        height: 70px;
-        width: 70px;
-        background-size: contain;
-        background-repeat: no-repeat;
+      img {
+        height: 50px;
+        width: 50px;
       }
     }
   }

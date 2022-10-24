@@ -8,6 +8,7 @@ function Header(prop) {
       <nav className="navbar">
         <div>
           <h1>Bienvenido a {nombrePagina}</h1>
+          <img src="castle.png" alt="logo" />
         </div>
         <Redes />
         <CartWidget valor="5" />

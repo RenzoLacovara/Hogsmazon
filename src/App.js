@@ -7,7 +7,7 @@ import "./scss/estilos.scss";
 function App() {
   return (
     <>
-      <Navbar nombre="Mi-Aplicacion-React" />
+      <Navbar nombre="Hogsmazon" />
       <Main />
       <Footer />
     </>
