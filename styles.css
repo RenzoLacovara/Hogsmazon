@@ -1,3 +1,20 @@
+:root {
+  --color-principal: #fffcf2;
+  --color-principal-d: #252422;
+  --color-secundario: #ccc5b9;
+  --color-secundario-d: #403d39;
+  --color-detalle: #eb5e28;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer components {
+    .link {
+        @apply hover:text-detalle
+    }
+} */
+/* .class {
+    @apply py-4 px-5
+} */
