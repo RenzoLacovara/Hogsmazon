@@ -1,12 +1,18 @@
-import React from 'react'
-import ItemListContainer from './ItemListContainer'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 const Main = () => {
   return (
-    <div className="flex h-full w-full justify-center items-start">
-<ItemListContainer nombre= "Renzo"/>
-    </div>
-  )
-}
+    <main className="flex h-full w-full justify-center items-start">
+      <Routes>
+        <Route path="" element="" />
+        <Route path="" element="" />
+        <Route path="" element="" />
+        <Route path="" element="" />
+        <Route path="" element="" />
+      </Routes>
+    </main>
+  );
+};
 
-export default Main
+export default Main;

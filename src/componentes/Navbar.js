@@ -1,5 +1,7 @@
 import React from "react";
+import NavLink from "./NavLink";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 function Header(prop) {
   let nombre1 = prop.nombre1;
@@ -8,13 +10,13 @@ function Header(prop) {
     <header className="bg-secundario h-28 w-full flex">
       <nav className="h-full w-full flex justify-between p-3">
         <div className="h-full w-full flex items-center gap-2">
-          <h1 className="text-2xl pt-2">
-            Bienvenido a{" "}
+          <Link to="/Home" className="mx-4 text-2xl pt-2">
             <span className="font-font1 font-semibold">{nombre1}</span>
             <span className="font-font2 font-bold">{nombre2}</span>
-          </h1>
+          </Link>
           <i class="fa-solid fa-broom-ball text-3xl text-detalle"></i>
         </div>
+        <NavLink />
         <CartWidget valor="5" />
       </nav>
     </header>
