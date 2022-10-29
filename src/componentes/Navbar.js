@@ -9,12 +9,16 @@ function Header(prop) {
   return (
     <header className="bg-secundario h-28 w-full flex">
       <nav className="h-full w-full flex justify-between p-3">
-        <div className="h-full w-full flex items-center gap-2">
+        <div className="h-full w-full flex items-center ">
           <Link to="/Home" className="mx-4 text-2xl pt-2">
             <span className="font-font1 font-semibold">{nombre1}</span>
             <span className="font-font2 font-bold">{nombre2}</span>
           </Link>
-          <i class="fa-solid fa-broom-ball text-3xl text-detalle"></i>
+          <img
+            src="logo1.png"
+            alt="logo"
+            className="h-8 w-8 filter drop-shadow-xl"
+          />
         </div>
         <NavLink />
         <CartWidget valor="5" />

@@ -2,11 +2,29 @@ import React from "react";
 
 const Redes = () => {
   return (
-    <div className="flex items-center px-5 h-full">
-      <ul className="h-full flex gap-5 items-center">
-        <a className="hover:text-detalle"href="www.linkedin.com">Linkedin</a>
-        <a className="hover:text-detalle"href="www.github.com">Github</a>
-        <a className="hover:text-detalle"href="www.gmail.com">Mail</a>
+    <div className="flex items-center justify-center h-full w-full">
+      <ul className="h-full flex gap-3 items-center text-2xl">
+        <a
+          className="hover:text-detalle"
+          href="https://www.instagram.com/"
+          target="_blanc"
+        >
+          <i class="fa-brands fa-square-instagram "></i>
+        </a>
+        <a
+          className="hover:text-detalle"
+          href="https://www.facebook.com/"
+          target="_blanc"
+        >
+          <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a
+          className="hover:text-detalle"
+          href="https://web.whatsapp.com/"
+          target="_blanc"
+        >
+          <i class="fa-brands fa-square-whatsapp"></i>
+        </a>
       </ul>
     </div>
   );
