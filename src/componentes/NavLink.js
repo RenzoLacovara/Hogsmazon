@@ -10,7 +10,7 @@ const NavLink = () => {
       <Link to="/Productos" className="hover:text-detalle">
         Productos
       </Link>
-      <Link to="/Ofertas" className="hover:text-detalle">
+      <Link to="Productos/Ofertas" className="hover:text-detalle">
         Ofertas
       </Link>
     </div>
