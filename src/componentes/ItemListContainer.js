@@ -1,28 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-let productosIniciales = [
-  { id: 1, nombre: "producto1", categoria: "categoria1" },
-  { id: 2, nombre: "producto2", categoria: "categoria2" },
-];
+import { getProducts, getProductsPorTipo } from "./utils";
+import { toast } from "react-toastify";
+
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { tipo } = useParams();
   useEffect(() => {
-    if (!tipo) {
-      console.log("pido todo");
+    if (tipo) {
+      toast.promise(
+        getProductsPorTipo,
+
+        {
+          pending: "Buscando productos",
+          success: "Como por arte de magia!",
+          error: "Ups, algo salió mal",
+        },
+        { position: toast.POSITION.TOP_CENTER }
+      );
+      getProductsPorTipo(tipo).then((res) => {
+        setItems(res);
+      });
     } else {
-      console.log("pido solo " + tipo);
+      toast.promise(
+        getProducts,
+
+        {
+          pending: "Buscando productos",
+          success: "Como por arte de magia!",
+          error: "Ups, algo salió mal",
+        },
+        { position: toast.POSITION.TOP_CENTER }
+      );
+      getProducts().then((res) => {
+        setItems(res);
+      });
     }
-    let pedido = new Promise((res) => {
-      setTimeout(() => {
-        res(productosIniciales);
-      }, 2000);
-    });
-    pedido.then((res) => {
-      setItems(res);
-    });
-    pedido.catch((error) => {});
   }, [tipo]);
 
   return (

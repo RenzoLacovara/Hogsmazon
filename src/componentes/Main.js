@@ -7,11 +7,10 @@ const Main = () => {
   return (
     <main className="flex h-full w-full justify-center items-start">
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Productos" element={<ItemListContainer />} />
         <Route path="/Productos/:tipo" element={<ItemListContainer />} />
-        <Route path="" element="" />
-        <Route path="" element="" />
+        <Route path="*" element={<h1>Ups, algo salió mal</h1>} />
       </Routes>
     </main>
   );

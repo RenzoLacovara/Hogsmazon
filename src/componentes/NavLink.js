@@ -1,20 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const NavLink = () => {
+const NavLinks = () => {
   return (
     <div className="flex justify-center items-center gap-4 mx-4 text-xl">
-      <Link to="/Tiendas" className="hover:text-detalle">
+      <NavLink to="/Tiendas" className="hover:text-detalle">
         Tiendas
-      </Link>
-      <Link to="/Productos" className="hover:text-detalle">
+      </NavLink>
+      <NavLink to="/Productos" className="hover:text-detalle">
         Productos
-      </Link>
-      <Link to="Productos/Ofertas" className="hover:text-detalle">
+      </NavLink>
+      <NavLink to="Productos/Ofertas" className="hover:text-detalle">
         Ofertas
-      </Link>
+      </NavLink>
     </div>
   );
 };
 
-export default NavLink;
+export default NavLinks;
