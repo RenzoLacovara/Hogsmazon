@@ -1,20 +1,18 @@
-let productosIniciales = [];
-export const getProducts = () => {
-  for (let i = 0; i < 10; i++) {
-    productosIniciales.push();
-  }
-  let pedido = new Promise((res) => {
-    setTimeout(() => {
-      res(productosIniciales);
-    }, 2000);
-  });
-  return pedido;
-};
-export const getProductsPorTipo = (tipo) => {
-  let pedido = new Promise((res) => {
-    setTimeout(() => {
-      res(productosIniciales.filter((item) => item.tipo === tipo));
-    }, 2000);
-  });
-  return pedido;
-};
+// let productosIniciales = [];
+// export const getProducts = () => {
+//   let simulacionPedido = fetch("../../public/productos.json")
+//     .then((response) => response.json())
+//     .then((data) => console.log(data));
+
+//   return simulacionPedido;
+// };
+
+// export const getProductsPorTipo = (id) => {
+//   let simulacionPedido = new Promise((res) => {
+//     setTimeout(() => {
+//       res(productosIniciales.filter((item) => item.category == id));
+//     }, 2000);
+//   });
+
+//   return simulacionPedido;
+// };

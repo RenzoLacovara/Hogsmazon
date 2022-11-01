@@ -10,7 +10,7 @@ function Header(prop) {
     <header className="bg-secundario h-28 w-full flex">
       <nav className="h-full w-full flex justify-between p-3">
         <div className="h-full w-full flex items-center ">
-          <Link to="/" className="mx-4 text-2xl pt-2">
+          <Link to="/Home" className="mx-4 text-2xl pt-2">
             <span className="font-font1 font-semibold">{nombre1}</span>
             <span className="font-font2 font-bold">{nombre2}</span>
           </Link>

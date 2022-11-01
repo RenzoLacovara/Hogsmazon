@@ -2,14 +2,17 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import ItemListContainer from "./ItemListContainer";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const Main = () => {
   return (
-    <main className="flex h-full w-full justify-center items-start">
+    <main className="flex h-full w-full grow justify-center items-start">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<ItemListContainer />} />
         <Route path="/Productos" element={<ItemListContainer />} />
         <Route path="/Productos/:tipo" element={<ItemListContainer />} />
+        <Route path="/Item/" element={<ItemDetailContainer />} />
         <Route path="*" element={<h1>Ups, algo salió mal</h1>} />
       </Routes>
     </main>
