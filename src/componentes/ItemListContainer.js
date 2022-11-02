@@ -23,7 +23,7 @@ const ItemListContainer = () => {
 
   return (
     <div className="p-4 text-xl flex justify-center mt-5">
-      {items.length === 0 ? <h1>Cargando...</h1> : <ItemList items={items} />}
+      {items.length === 0 ? <h1 className="h-screen">Cargando...</h1> : <ItemList items={items} />}
     </div>
   );
 };

@@ -13,7 +13,7 @@ const Main = () => {
         <Route path="/Productos" element={<ItemListContainer />} />
         <Route path="/Productos/:cat" element={<ItemListContainer />} />
         <Route path="/Item/:id" element={<ItemDetailContainer />} />
-        <Route path="*" element={<h1>Ups, algo salió mal</h1>} />
+        <Route path="*" element={<h1 className="h-screen">Ups, algo salió mal</h1>} />
       </Routes>
     </main>
   );

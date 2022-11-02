@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Item = ({ nombre, imagen, precio, tienda }) => {
+const Item = ({ nombre, imagen, precio, tienda, id }) => {
   return (
     <article className="w-64 rounded-2xl shadow-lg h-96 flex flex-col items-center justify-between">
       <div className="text-center">
@@ -16,7 +16,7 @@ const Item = ({ nombre, imagen, precio, tienda }) => {
       </div>
 
       <Link
-        to="/Item/"
+        to={"/Item/"+id}
         className="bg-secundario rounded-md px-2 py-1 my-4 hover:bg-detalle hover:text-princ"
       >
         Ver mas
