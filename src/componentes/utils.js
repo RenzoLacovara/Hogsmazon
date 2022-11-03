@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-let productosIniciales = [
+let productos = [
   {
     nombre: "Diadema de Ravenclaw",
     id: "1",
@@ -98,10 +98,10 @@ const generarPromesa = (operation, time = 1000) => {
   return promesa;
 };
 
-export const getProducts = () => generarPromesa(productosIniciales);
+export const getProductos = () => generarPromesa(productos);
 
-export const getProductsPorTipo = (oferta) =>
-  generarPromesa(productosIniciales.filter((item) => item.oferta === "si"));
+export const getProductosPorOferta = (oferta) =>
+  generarPromesa(productos.filter((item) => item.oferta === "si"));
 
-export const getProductsPorNombre = (id) =>
-  generarPromesa(productosIniciales.filter((item) => item.id === id));
+export const getProductosPorNombre = (id) =>
+  generarPromesa(productos.filter((item) => item.id === id));

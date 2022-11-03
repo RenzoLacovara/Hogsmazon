@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
-import {getProductsPorTipo, getProducts} from "./utils"
-
+import { getProductosPorOferta, getProductos } from "./utils";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const { cat } = useParams();
+  const { oferta } = useParams();
   useEffect(() => {
-    if (cat) {
-      getProductsPorTipo(cat).then((respuesta) => {
+    if (oferta) {
+      getProductosPorOferta(oferta).then((respuesta) => {
         setItems(respuesta);
-    
       });
-
     } else {
-    getProducts().then((respuesta) => {
+      getProductos().then((respuesta) => {
         setItems(respuesta);
       });
     }
-  }, [cat]);
+  }, [oferta]);
 
   return (
     <div className="p-4 text-xl flex justify-center mt-5">
-      {items.length === 0 ? <h1 className="h-screen">Cargando...</h1> : <ItemList items={items} />}
+      {items.length === 0 ? (
+        <h1 className="h-screen">Cargando...</h1>
+      ) : (
+        <ItemList items={items} />
+      )}
     </div>
   );
 };

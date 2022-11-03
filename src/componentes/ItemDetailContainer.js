@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import { getProductsPorNombre } from "./utils";
+import { getProductosPorNombre } from "./utils";
 
 const ItemDetailContainer = () => {
   const [detalle, setDetalle] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
-    getProductsPorNombre(id).then((respuesta) => {
+    getProductosPorNombre(id).then((respuesta) => {
       setDetalle(respuesta);
     });
   }, [id]);

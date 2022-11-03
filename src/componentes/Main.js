@@ -11,9 +11,12 @@ const Main = () => {
         <Route path="/Home" element={<Home />} />
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/Productos" element={<ItemListContainer />} />
-        <Route path="/Productos/:cat" element={<ItemListContainer />} />
+        <Route path="/Productos/:oferta" element={<ItemListContainer />} />
         <Route path="/Item/:id" element={<ItemDetailContainer />} />
-        <Route path="*" element={<h1 className="h-screen">Ups, algo salió mal</h1>} />
+        <Route
+          path="*"
+          element={<h1 className="h-screen">Ups, algo salió mal</h1>}
+        />
       </Routes>
     </main>
   );
