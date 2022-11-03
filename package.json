@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "twcss": "npx tailwindcss-cli@latest build styles.css -o src/style.css"
+    "twcss": "npx tailwindcss-cli@latest build styles.css -o src/styles.css"
   },
   "eslintConfig": {
     "extends": [

@@ -1,25 +1,23 @@
-import React, { useEffect, useState }   from "react";
-import ItemDetail from "./ItemDetail"
+import React, { useEffect, useState } from "react";
+import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import {getProductsPorNombre} from "./utils"
+import { getProductsPorNombre } from "./utils";
 
 const ItemDetailContainer = () => {
   const [detalle, setDetalle] = useState({});
   const { id } = useParams();
-  
-  useEffect(() => {
 
+  useEffect(() => {
     getProductsPorNombre(id).then((respuesta) => {
       setDetalle(respuesta);
     });
+  }, [id]);
 
-    }, [id])
-
-
-  return  (
+  return (
     <div>
-      <ItemDetail detalle={detalle}/>
+      <ItemDetail detalle={detalle} />
     </div>
-)}
+  );
+};
 
 export default ItemDetailContainer;

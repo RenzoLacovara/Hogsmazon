@@ -1,6 +1,7 @@
 module.exports = {
   purge: [],
   darkMode: "class", // or 'media' or 'class'
+  content: ["./src/**/*.{html,js}"],
   theme: {
     colors: {
       princ: "var(--color-principal)",

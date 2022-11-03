@@ -1,41 +1,108 @@
-import React, { useEffect, useState }   from "react";
+import React, { useEffect, useState } from "react";
 
-import ItemCount from "./ItemCount"
+import ItemCount from "./ItemCount";
 
+const ItemDetail = ({ detalle }) => {
+  const [detalles, setDetalles] = useState({});
+  useEffect(() => {
+    let produ = detalle[0];
+    setDetalles(produ);
+  }, [detalle]);
 
-const ItemDetail = ({detalle}) => {
-    const [detalles, setDetalles] = useState({});
-    useEffect(() => {
- 
-        let produ = detalle[0]
-        setDetalles(produ)
-    
-        }, [detalle])
+  const handleOnAdd = (cantidad) => {};
 
-   
-    const handleOnAdd = (cantidad) => {
-    }
-
+  if (detalles === undefined) {
+    return <h1 className="h-screen">Cargando...</h1>;
+  } else if (detalles.oferta === "si") {
     return (
-        
-        <div>
-            
-            {detalles === undefined ? <h1 className="h-screen">Cargando...</h1> : 
-            <div>
+      <div className="h-full my-14 w-screen flex justify-center items-center">
+        <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
+          <img
+            className="h-96 w-96 object-contain"
+            src={detalles.imagen}
+            alt={detalles.nombre}
+          />
 
-                <h2>{detalles.nombre} - ${detalles.precio}</h2>
-                <div className="detail-flex">
-                    <img src={detalles.imagen} alt={detalles.nombre} />
-                    <div>
-                        <p>{detalles.descripcion}</p>
-                        <ItemCount handleOnAdd={handleOnAdd}/>
-                    </div>
-    
-                </div>
-              
-            </div>}
-            
+          <div className="w-full flex flex-col justify-between">
+            <div className="text-center h-full">
+              <h2 className="text-2xl inline-block">
+                {detalles.nombre} -{" "}
+                <h2 className="inline-block text-sm line-through">
+                  ${detalles.precio}
+                </h2>
+                <h2 className="inline-block text-detalle font-bold ml-2">
+                  ${detalles.ofertaValor}
+                </h2>
+              </h2>
+              <p className="text-justify p-6 text-sm">{detalles.descripcion}</p>
+            </div>
+            <div>
+              <ItemCount handleOnAdd={handleOnAdd} />
+            </div>
+          </div>
         </div>
-    )
-}
-export default ItemDetail
+      </div>
+    );
+  } else {
+    return (
+      <div className="h-full my-14 w-screen flex justify-center items-center">
+        <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
+          <img
+            className="h-96 w-96 object-contain"
+            src={detalles.imagen}
+            alt={detalles.nombre}
+          />
+          <div className="w-full flex flex-col justify-between">
+            <div className="text-center">
+              <h2 className="text-2xl inline-block">
+                {detalles.nombre} -{" "}
+                <h2 className="inline-block text-detalle font-bold">
+                  ${detalles.precio}
+                </h2>
+              </h2>
+              <p className="text-justify p-6 text-sm">{detalles.descripcion}</p>
+            </div>
+            <div>
+              <ItemCount handleOnAdd={handleOnAdd} />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+};
+
+//     return (
+//     <div>
+//       {detalles === undefined ? (
+//         <h1 className="h-screen">Cargando...</h1>
+//       ) : (
+//         <div className="h-full my-14 w-screen flex justify-center items-center">
+//           <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
+//             <img
+//               className="h-96 w-96 object-contain"
+//               src={detalles.imagen}
+//               alt={detalles.nombre}
+//             />
+
+//             <div className="w-full">
+//               <div className="text-center">
+//                 <h2 className="text-2xl inline-block">
+//                   {detalles.nombre} -{" "}
+//                   <h2 className="inline-block text-detalle font-bold">
+//                     ${detalles.precio}
+//                   </h2>
+//                 </h2>
+//               </div>
+//               <p className="text-justify p-6 text-sm">{detalles.descripcion}</p>
+//               <div>
+//                 <ItemCount handleOnAdd={handleOnAdd} />
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+export default ItemDetail;
