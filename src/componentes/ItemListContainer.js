@@ -6,6 +6,7 @@ import { getProductosPorOferta, getProductos } from "./utils";
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { oferta } = useParams();
+
   useEffect(() => {
     if (oferta) {
       getProductosPorOferta(oferta).then((respuesta) => {
