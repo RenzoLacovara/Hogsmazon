@@ -21,7 +21,7 @@ function Header(prop) {
           />
         </div>
         <NavLink />
-        <CartWidget valor="5" />
+        <CartWidget />
       </nav>
     </header>
   );

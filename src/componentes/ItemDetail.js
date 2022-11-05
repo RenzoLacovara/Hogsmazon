@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect, useState, useContext } from "react";
+import { contexto } from "./CustomProvider";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ detalle }) => {
+  const contextValue = useContext(contexto);
+
   const [detalles, setDetalles] = useState({});
   useEffect(() => {
     let produ = detalle[0];
@@ -72,37 +74,4 @@ const ItemDetail = ({ detalle }) => {
   }
 };
 
-//     return (
-//     <div>
-//       {detalles === undefined ? (
-//         <h1 className="h-screen">Cargando...</h1>
-//       ) : (
-//         <div className="h-full my-14 w-screen flex justify-center items-center">
-//           <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
-//             <img
-//               className="h-96 w-96 object-contain"
-//               src={detalles.imagen}
-//               alt={detalles.nombre}
-//             />
-
-//             <div className="w-full">
-//               <div className="text-center">
-//                 <h2 className="text-2xl inline-block">
-//                   {detalles.nombre} -{" "}
-//                   <h2 className="inline-block text-detalle font-bold">
-//                     ${detalles.precio}
-//                   </h2>
-//                 </h2>
-//               </div>
-//               <p className="text-justify p-6 text-sm">{detalles.descripcion}</p>
-//               <div>
-//                 <ItemCount handleOnAdd={handleOnAdd} />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
 export default ItemDetail;
