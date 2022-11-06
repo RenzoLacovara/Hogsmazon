@@ -20,12 +20,12 @@ const ItemDetail = ({ detalle }) => {
       <div className="h-full my-14 w-screen flex justify-center items-center">
         <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
           <img
-            className="h-96 w-96 object-contain"
+            className="h-96 w-2/5 object-contain bg-mapa overflow-hidden"
             src={detalles.imagen}
             alt={detalles.nombre}
           />
 
-          <div className="w-full flex flex-col justify-between">
+          <div className=" w-3/5 flex flex-col justify-between">
             <div className="text-center h-full">
               <h2 className="text-2xl inline-block">
                 {detalles.nombre} -{" "}
@@ -50,11 +50,11 @@ const ItemDetail = ({ detalle }) => {
       <div className="h-full my-14 w-screen flex justify-center items-center">
         <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
           <img
-            className="h-96 w-96 object-contain"
+            className="h-96 w-2/5 object-contain bg-mapa overflow-hidden"
             src={detalles.imagen}
             alt={detalles.nombre}
           />
-          <div className="w-full flex flex-col justify-between">
+          <div className="w-3/5 flex flex-col justify-between">
             <div className="text-center">
               <h2 className="text-2xl inline-block">
                 {detalles.nombre} -{" "}

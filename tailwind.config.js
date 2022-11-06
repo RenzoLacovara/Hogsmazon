@@ -15,7 +15,12 @@ module.exports = {
       font2: ["Amazon Ember Display", "sans-serif"],
       font3: ["Red Hat Display", "sans-serif"],
     },
-    extend: {},
+
+    extend: {
+      backgroundImage: {
+        mapa: "url('../public/imagenes/mapa.png')",
+      },
+    },
   },
   variants: {
     extend: {},

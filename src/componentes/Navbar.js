@@ -15,7 +15,7 @@ function Header(prop) {
             <span className="font-font2 font-bold">{nombre2}</span>
           </Link>
           <img
-            src="../logo1.png"
+            src="../imagenes/logo1.png"
             alt="logo"
             className="h-8 w-8 filter drop-shadow-xl"
           />

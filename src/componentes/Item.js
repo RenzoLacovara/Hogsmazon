@@ -10,11 +10,13 @@ const Item = ({ nombre, imagen, precio, tienda, id, oferta, ofertaValor }) => {
             <h1>{nombre}</h1>
             <h4 className="inline line-through text-sm">${precio}</h4>
             <h3 className="inline text-detalle font-bold"> ${ofertaValor}</h3>
-            <img
-              className="rounded-lg h-60 w-56  object-cover "
-              src={imagen}
-              alt={nombre}
-            />
+            <div>
+              <img
+                className="rounded-lg h-60 w-56 object-cover bg-mapa"
+                src={imagen}
+                alt={nombre}
+              />
+            </div>
             <h4 className="text-sm">by {tienda.nombre}</h4>
           </div>
 
@@ -31,7 +33,7 @@ const Item = ({ nombre, imagen, precio, tienda, id, oferta, ofertaValor }) => {
             <h1>{nombre}</h1>
             <h3 className="text-detalle font-bold">${precio}</h3>
             <img
-              className="rounded-lg h-60 w-56  object-cover "
+              className="rounded-lg h-60 w-56  object-contain bg-mapa"
               src={imagen}
               alt={nombre}
             />
