@@ -20,7 +20,7 @@ const ItemDetail = ({ detalle }) => {
       <div className="h-full my-14 w-screen flex justify-center items-center">
         <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
           <img
-            className="h-96 w-2/5 object-contain bg-mapa overflow-hidden"
+            className="h-96 w-2/5 object-contain bg-mapa bg-cover overflow-hidden"
             src={detalles.imagen}
             alt={detalles.nombre}
           />
@@ -50,7 +50,7 @@ const ItemDetail = ({ detalle }) => {
       <div className="h-full my-14 w-screen flex justify-center items-center">
         <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">
           <img
-            className="h-96 w-2/5 object-contain bg-mapa overflow-hidden"
+            className="h-96 w-2/5 object-contain bg-mapa bg-cover overflow-hidden"
             src={detalles.imagen}
             alt={detalles.nombre}
           />

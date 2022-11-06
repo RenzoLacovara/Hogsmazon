@@ -12,7 +12,7 @@ const Item = ({ nombre, imagen, precio, tienda, id, oferta, ofertaValor }) => {
             <h3 className="inline text-detalle font-bold"> ${ofertaValor}</h3>
             <div>
               <img
-                className="rounded-lg h-60 w-56 object-cover bg-mapa"
+                className="rounded-lg h-60 w-56 object-contain bg-mapa"
                 src={imagen}
                 alt={nombre}
               />
