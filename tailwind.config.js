@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         mapa: "url('../public/imagenes/mapa.png')",
+        circle: "url('../public/imagenes/pokemon.svg')",
       },
     },
   },

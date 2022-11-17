@@ -1,21 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { db } from "./firebase";
 import ItemList from "./ItemList";
-import { getProductosPorOferta, getProductos } from "./utils";
+import { generarPromesa } from "./utils";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { oferta } = useParams();
 
   useEffect(() => {
+    const coleccion = collection(db, "productos");
     if (oferta) {
-      getProductosPorOferta(oferta).then((respuesta) => {
-        setItems(respuesta);
-      });
+      const filtro = query(coleccion, where("oferta", "==", true));
+      const consulta = getDocs(filtro);
+      generarPromesa(consulta)
+        .then((respuesta) => {
+          const productos = respuesta.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setItems(productos);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     } else {
-      getProductos().then((respuesta) => {
-        setItems(respuesta);
-      });
+      const consulta = getDocs(coleccion);
+      generarPromesa(consulta)
+        .then((respuesta) => {
+          const productos = respuesta.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setItems(productos);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   }, [oferta]);
 

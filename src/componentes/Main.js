@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import ItemListContainer from "./ItemListContainer";
 import ItemDetailContainer from "./ItemDetailContainer";
+import Carrito from "./Carrito";
 
 const Main = () => {
   return (
@@ -13,6 +14,7 @@ const Main = () => {
         <Route path="/Productos" element={<ItemListContainer />} />
         <Route path="/Productos/:oferta" element={<ItemListContainer />} />
         <Route path="/Item/:id" element={<ItemDetailContainer />} />
+        <Route path="/Carrito" element={<Carrito />} />
         <Route
           path="*"
           element={<h1 className="h-screen">Ups, algo salió mal</h1>}

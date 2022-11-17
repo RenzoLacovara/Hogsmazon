@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import { productos } from "./productos";
 
-const generarPromesa = (operation, time = 1000) => {
+export const generarPromesa = (operation, time = 1000) => {
   let promesa = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(operation);

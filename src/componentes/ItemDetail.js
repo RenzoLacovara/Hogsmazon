@@ -7,13 +7,13 @@ const ItemDetail = ({ detalle }) => {
 
   const [detalles, setDetalles] = useState({});
   useEffect(() => {
-    let produ = detalle[0];
-    setDetalles(produ);
+    setDetalles(detalle);
   }, [detalle]);
 
   const handleOnAdd = (cantidad) => {};
 
-  return detalles === undefined ? (
+  let ofe = detalles.precio - detalles.precio * detalles.descuento;
+  return detalles.nombre === undefined ? (
     <h1 className="h-screen">Cargando...</h1>
   ) : (
     <div className="h-full my-14 w-screen flex justify-center items-center">
@@ -26,23 +26,29 @@ const ItemDetail = ({ detalle }) => {
 
         <div className=" w-3/5 flex flex-col justify-between">
           <div className="text-center h-full">
-            <h2 className="text-2xl inline-block">
-              {detalles.nombre} -{" "}
-              <h2
-                className={`inline-block ${
-                  detalles.oferta === "si"
+            <h2 className="text-2xl">{detalles.nombre}</h2>
+            <div className="h-10 flex justify-center items-center">
+              <h3
+                className={` inline-block ${
+                  detalles.oferta === true
                     ? "text-sm line-through"
-                    : "text-detalle font-bold"
+                    : "text-detalle font-bold text-2xl"
                 }`}
               >
                 ${detalles.precio}
-              </h2>
-              {detalles.oferta === "si" && (
-                <h2 className="inline-block text-detalle font-bold ml-2">
-                  ${detalles.ofertaValor}
-                </h2>
+              </h3>
+              {detalles.oferta === true && (
+                <>
+                  <h3 className="inline-block text-detalle font-bold ml-2 text-2xl">
+                    ${ofe}
+                  </h3>
+                  <h3 className=" ml-2 inline bg-detalle text-princ px-1 rounded-md text-md">
+                    %{detalles.descuento * 100}
+                  </h3>
+                </>
               )}
-            </h2>
+            </div>
+
             <p className="text-justify p-6 text-sm">{detalles.descripcion}</p>
           </div>
           <div>

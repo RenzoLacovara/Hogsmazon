@@ -14299,6 +14299,10 @@ video {
   background-image: url('../public/imagenes/mapa.png');
 }
 
+.bg-circle {
+  background-image: url('../public/imagenes/pokemon.svg');
+}
+
 .from-princ {
   --tw-gradient-from: var(--color-principal);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
@@ -33510,6 +33514,10 @@ video {
     background-image: url('../public/imagenes/mapa.png');
   }
 
+  .sm\:bg-circle {
+    background-image: url('../public/imagenes/pokemon.svg');
+  }
+
   .sm\:from-princ {
     --tw-gradient-from: var(--color-principal);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
@@ -52681,6 +52689,10 @@ video {
 
   .md\:bg-mapa {
     background-image: url('../public/imagenes/mapa.png');
+  }
+
+  .md\:bg-circle {
+    background-image: url('../public/imagenes/pokemon.svg');
   }
 
   .md\:from-princ {
@@ -71856,6 +71868,10 @@ video {
     background-image: url('../public/imagenes/mapa.png');
   }
 
+  .lg\:bg-circle {
+    background-image: url('../public/imagenes/pokemon.svg');
+  }
+
   .lg\:from-princ {
     --tw-gradient-from: var(--color-principal);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
@@ -91029,6 +91045,10 @@ video {
     background-image: url('../public/imagenes/mapa.png');
   }
 
+  .xl\:bg-circle {
+    background-image: url('../public/imagenes/pokemon.svg');
+  }
+
   .xl\:from-princ {
     --tw-gradient-from: var(--color-principal);
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
@@ -110200,6 +110220,10 @@ video {
 
   .\32xl\:bg-mapa {
     background-image: url('../public/imagenes/mapa.png');
+  }
+
+  .\32xl\:bg-circle {
+    background-image: url('../public/imagenes/pokemon.svg');
   }
 
   .\32xl\:from-princ {
