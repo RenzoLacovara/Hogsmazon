@@ -5,7 +5,7 @@ import { contexto } from "./CustomProvider";
 const CartWidget = () => {
   const contextValue = useContext(contexto);
   return (
-    <Link to="/Carrito">
+    <Link to="/Cart">
       <div className="flex justify-center items-center mx-4 text-detalle w-16 h-full text-center">
         <div className="bg-secundariod pl-2 rounded-l-full">
           <img

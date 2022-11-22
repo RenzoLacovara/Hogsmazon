@@ -17,7 +17,7 @@ function Header(prop) {
           <img
             src="../imagenes/logo1.png"
             alt="logo"
-            className="h-8 w-8 filter drop-shadow-xl"
+            className="h-8 w-8 filter drop-shadow-xl hover:animate-wiggle"
           />
         </div>
         <NavLink />

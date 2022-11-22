@@ -84,7 +84,7 @@
     "descripcion": "This bespoke recreation is sculpted from resin and measures approximately 14.5” in length. Available in a sleek, collectable wand box with decorative paper overlay, the unique wand is ready for display anywhere in your home. Also makes the perfect gift for Slytherin fans or any aspiring witch or wizard!",
     "tienda": {
       "nombre": "Ollivanders",
-      "imagen": "./ollivanders.png"
+      "imagen": "../imagenes/ollivanders.png"
     }
   },
   {

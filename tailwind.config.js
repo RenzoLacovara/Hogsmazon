@@ -11,6 +11,7 @@ module.exports = {
       detalle: "var(--color-detalle)",
       detalle2: "var(--color-detalle2)",
       detalle3: "var(--color-detalle3)",
+      detalle4: "var(--color-detalle4)",
     },
     fontFamily: {
       font1: ["Harry Potter", "sans-serif"],
@@ -23,10 +24,27 @@ module.exports = {
         mapa: "url('../public/imagenes/mapa.png')",
         circle: "url('../public/imagenes/pokemon.svg')",
       },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        point: {
+          "0%, 100%": { transform: "translate(-3px)" },
+          "50%": { transform: "translate(3px)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+        point: "point 1s ease-in-out infinite",
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ["hover", "focus"],
+      textOpacity: ["hover"],
+    },
   },
   plugins: [],
 };

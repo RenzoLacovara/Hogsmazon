@@ -8,7 +8,7 @@ import Snitch from "./Snitch";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
-  const { oferta } = useParams();
+  const { oferta, ssid } = useParams();
 
   useEffect(() => {
     const coleccion = collection(db, "productos");
@@ -26,21 +26,35 @@ const ItemListContainer = () => {
         .catch((err) => {
           console.log(err);
         });
-    } else {
-      const consulta = getDocs(coleccion);
-      generarPromesa(consulta)
+    } else if (ssid) {
+      const filtro2 = query(coleccion, where("tienda.id", "==", ssid));
+      const consulta2 = getDocs(filtro2);
+      generarPromesa(consulta2)
         .then((respuesta) => {
-          const productos = respuesta.docs.map((doc) => ({
+          const productos2 = respuesta.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
           }));
-          setItems(productos);
+          setItems(productos2);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
+      const consulta3 = getDocs(coleccion);
+      generarPromesa(consulta3)
+        .then((respuesta) => {
+          const productos3 = respuesta.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setItems(productos3);
         })
         .catch((err) => {
           console.log(err);
         });
     }
-  }, [oferta]);
+  }, [oferta, ssid]);
 
   return (
     <div className="p-4 text-xl flex justify-center mt-3">

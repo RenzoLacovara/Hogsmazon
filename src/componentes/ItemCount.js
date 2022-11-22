@@ -16,12 +16,9 @@ const ItemCount = ({ handleOnAdd }) => {
   return (
     <div className="h-full w-full flex flex-col items-center gap-2">
       <div className="flex">
-        <button
-          className="bg-secundario rounded-l-full hover:bg-detalle"
-          onClick={restar}
-        >
+        <button onClick={restar}>
           <img
-            className="w-16 h-10"
+            className="w-16 h-10 hover:animate-point"
             src="../imagenes/izquierda.png"
             alt="menos"
           ></img>
@@ -29,12 +26,9 @@ const ItemCount = ({ handleOnAdd }) => {
         <div className="flex justify-center items-center w-12 h-12 border-2 border-secundario">
           <h2 className="py-1 px-2 w-7 text-center text-principald">{count}</h2>
         </div>
-        <button
-          className="bg-secundario rounded-r-full hover:bg-detalle"
-          onClick={sumar}
-        >
+        <button onClick={sumar}>
           <img
-            className="w-16 h-10"
+            className="w-16 h-10 hover:animate-point"
             src="../imagenes/derecha.png"
             alt="mas"
           ></img>
@@ -42,7 +36,7 @@ const ItemCount = ({ handleOnAdd }) => {
       </div>
       <div>
         <button
-          className="bg-secundariod px-2 py-1 rounded-full hover:bg-detalle text-princ mb-2"
+          className="bg-detalle4 px-2 py-1 rounded-full hover:bg-detalle text-princ mb-2"
           onClick={confirmar}
         >
           Add to Cauldron
