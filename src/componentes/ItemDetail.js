@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { contexto } from "./CustomProvider";
 import ItemCount from "./ItemCount";
+import Snitch from "./Snitch";
 
 const ItemDetail = ({ detalle }) => {
   const contextValue = useContext(contexto);
@@ -14,7 +15,9 @@ const ItemDetail = ({ detalle }) => {
 
   let ofe = detalles.precio - detalles.precio * detalles.descuento;
   return detalles.nombre === undefined ? (
-    <h1 className="h-screen">Cargando...</h1>
+    <div className="p-4 text-xl flex justify-center mt-3">
+      <Snitch />
+    </div>
   ) : (
     <div className="h-full my-14 w-screen flex justify-center items-center">
       <div className="rounded-2xl shadow-lg overflow-hidden flex w-2/3 h-full">

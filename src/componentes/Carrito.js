@@ -1,9 +1,11 @@
 import React from "react";
 import { db } from "./firebase";
 import { useRef, useState } from "react";
-import { collection, query, where, addDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
+import { useCarrito } from "./CustomProvider";
 
 const Carrito = () => {
+  const contextValue = useCarrito();
   const handleSubmit = (e) => {
     const ordenes = collection(db, "ordenes");
     addDoc(ordenes);

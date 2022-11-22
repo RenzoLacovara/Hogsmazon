@@ -9,6 +9,8 @@ module.exports = {
       secundario: "var(--color-secundario)",
       secundariod: "var(--color-secundario-d)",
       detalle: "var(--color-detalle)",
+      detalle2: "var(--color-detalle2)",
+      detalle3: "var(--color-detalle3)",
     },
     fontFamily: {
       font1: ["Harry Potter", "sans-serif"],

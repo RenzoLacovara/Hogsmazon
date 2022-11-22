@@ -5,13 +5,13 @@ const Item = ({ nombre, imagen, precio, tienda, id, oferta, descuento }) => {
   let ofe = precio - precio * descuento;
   return (
     <div>
-      <article className="my-8 w-64 rounded-2xl shadow-lg h-96 flex flex-col items-center justify-between">
+      <article className="my-8 w-80 rounded-2xl shadow-lg h-96 flex flex-col items-center justify-between">
         <div className="text-center">
           <h1>{nombre}</h1>
           <h4 className="text-sm">by {tienda.nombre}</h4>
           <div>
             <img
-              className="rounded-lg h-60 w-56 object-contain bg-mapa"
+              className="rounded-lg h-60 w-72 object-contain bg-mapa"
               src={imagen}
               alt={nombre}
             />

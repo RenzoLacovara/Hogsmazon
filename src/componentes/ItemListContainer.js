@@ -4,6 +4,7 @@ import { db } from "./firebase";
 import ItemList from "./ItemList";
 import { generarPromesa } from "./utils";
 import { collection, query, where, getDocs } from "firebase/firestore";
+import Snitch from "./Snitch";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -42,12 +43,8 @@ const ItemListContainer = () => {
   }, [oferta]);
 
   return (
-    <div className="p-4 text-xl flex justify-center mt-5">
-      {items.length === 0 ? (
-        <h1 className="h-screen">Cargando...</h1>
-      ) : (
-        <ItemList items={items} />
-      )}
+    <div className="p-4 text-xl flex justify-center mt-3">
+      {items.length === 0 ? <Snitch /> : <ItemList items={items} />}
     </div>
   );
 };
