@@ -5,13 +5,20 @@ import { contexto } from "./CustomProvider";
 const CartWidget = () => {
   const contextValue = useContext(contexto);
   return (
-    <div className="flex h-full justify-center items-center mx-4">
-      <Link to="/Carrito">
-        <i className="fa-solid fa-cart-shopping bg-secundariod text-detalle rounded-2xl w-16 h-8  text-center p-2">
+    <Link to="/Carrito">
+      <div className="flex justify-center items-center mx-4 text-detalle w-16 h-full text-center">
+        <div className="bg-secundariod pl-2 rounded-l-full">
+          <img
+            src="../imagenes/cauldron.png"
+            className="caldero h-8 w-8 my-1 pb-1"
+            alt="carrito"
+          ></img>
+        </div>
+        <h2 className="text-center bg-secundariod py-2 pr-3 rounded-r-full">
           {contextValue.cantidad}
-        </i>
-      </Link>
-    </div>
+        </h2>
+      </div>
+    </Link>
   );
 };
 
