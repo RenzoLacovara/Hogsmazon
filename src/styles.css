@@ -8,6 +8,13 @@
   --color-detalle3: #fad734;
 }
 
+.caldero {
+  -webkit-filter: invert(61%) sepia(63%) saturate(5630%) hue-rotate(345deg)
+    brightness(95%) contrast(93%);
+          filter: invert(61%) sepia(63%) saturate(5630%) hue-rotate(345deg)
+    brightness(95%) contrast(93%);
+}
+
 .snitch {
   position: relative;
   text-align: center;
