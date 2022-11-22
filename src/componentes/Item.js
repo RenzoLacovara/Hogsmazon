@@ -4,19 +4,26 @@ import { Link } from "react-router-dom";
 const Item = ({ nombre, imagen, precio, tienda, id, oferta, descuento }) => {
   let ofe = precio - precio * descuento;
   return (
-    <div>
+    <Link
+      to={"/Item/" + id}
+      className="transform hover:-translate-y-4 duration-150"
+    >
       <article className="my-8 w-80 rounded-2xl shadow-lg h-96 flex flex-col items-center justify-between">
-        <div className="text-center">
-          <h1>{nombre}</h1>
-          <h4 className="text-sm">by {tienda.nombre}</h4>
-          <div>
+        <div className="w-full">
+          <div className="w-full">
             <img
-              className="rounded-lg h-60 w-72 object-contain bg-mapa"
+              className="rounded-tr-2xl rounded-tl-2xl h-60 w-full object-contain bg-mapa"
               src={imagen}
               alt={nombre}
             />
           </div>
-          <div className="h-9 flex justify-center items-center">
+          <div className="text-left pl-3">
+            <h1 className="font-semibold">{nombre}</h1>
+            <h4 className="text-sm font-light">
+              by <span className="font-medium">{tienda.nombre}</span>
+            </h4>
+          </div>
+          <div className="h-9 flex justify-end items-center pr-3">
             <h4
               className={`inline ${
                 oferta === true
@@ -32,22 +39,15 @@ const Item = ({ nombre, imagen, precio, tienda, id, oferta, descuento }) => {
                   {" "}
                   ${ofe}{" "}
                 </h3>
-                <h3 className="inline bg-detalle text-princ px-1 rounded-md text-md ml-2">
+                <h3 className="inline bg-detalle text-princ px-1 rounded-md text-lg ml-2">
                   %{descuento * 100}
                 </h3>
               </>
             )}
           </div>
         </div>
-
-        <Link
-          to={"/Item/" + id}
-          className="bg-secundario rounded-md px-2 py-1 my-4 hover:bg-detalle hover:text-princ"
-        >
-          Ver mas
-        </Link>
       </article>
-    </div>
+    </Link>
   );
 };
 

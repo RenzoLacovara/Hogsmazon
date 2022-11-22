@@ -3,15 +3,15 @@ import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
   return (
-    <div className="flex justify-center items-center gap-4 mx-4 text-xl">
+    <div className="flex w-full justify-end items-center gap-4 mx-4 text-xl">
       <NavLink to="/Tiendas" className="hover:text-detalle">
-        Tiendas
+        Shops
       </NavLink>
       <NavLink to="/Productos" className="hover:text-detalle">
-        Productos
+        Products
       </NavLink>
       <NavLink to="Productos/Ofertas" className="hover:text-detalle">
-        Ofertas
+        On Sale
       </NavLink>
     </div>
   );
