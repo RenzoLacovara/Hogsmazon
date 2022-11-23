@@ -3,7 +3,7 @@ import React from "react";
 const Redes = () => {
   return (
     <div className="flex items-center justify-center h-full w-full">
-      <ul className="h-full flex gap-3 items-center text-2xl">
+      <ul className="h-full flex flex-col gap-1 items-center text-2xl">
         <a
           className="hover:text-detalle"
           href="https://www.instagram.com/"

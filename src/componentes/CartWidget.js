@@ -9,7 +9,7 @@ const CartWidget = () => {
       <div className="flex justify-center items-center mx-4 text-detalle w-16 h-full text-center">
         <div className="bg-secundariod pl-2 rounded-l-full">
           <img
-            src="../imagenes/cauldron.png"
+            src="../../imagenes/cauldron.png"
             className="caldero h-8 w-8 my-1 pb-1"
             alt="carrito"
           ></img>
